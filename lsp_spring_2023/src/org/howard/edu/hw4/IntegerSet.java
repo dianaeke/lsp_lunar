@@ -97,7 +97,7 @@ public class IntegerSet {
     
 //    add item if already not exist in list
     
-    public void addItem(int item ) {
+    public void addItem(int item) {
         
         boolean exist=false;
         

@@ -2,6 +2,9 @@ package org.howard.edu.hw4;
 
 import java.util.*;
 
+import org.howard.edu.hw5.IntegerSet;
+import org.howard.edu.hw5.IntegerSetException;
+
 public interface Driver {
 	public static void main(String[] args) throws IntegerSetException {
         
