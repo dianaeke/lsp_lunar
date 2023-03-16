@@ -20,18 +20,18 @@ public class IntegerSetTest {
     }
     
     @Test
-    @DisplayName("Test case for clear")
-    public void testClear() {
-        set.clear();
-        assertEquals(0, set.length());
-    }
-    
-    @Test
     @DisplayName("Test case for length")
     public void testLength() {
         assertEquals(3, set.length());
     }
     
+    @Test
+    @DisplayName("Test case for clear")
+    public void testClear() {
+        set.clear();
+        assertEquals(0, set.length());
+    }
+  
     @Test
     @DisplayName("Test case for equals")
     public void testEquals() {
@@ -111,17 +111,16 @@ public class IntegerSetTest {
     @DisplayName("Test case for intersection")
     public void testIntersection() {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(2);
-        list.add(4);
+        list.add(1);
+        list.add(3);
         list.add(6);
         IntegerSet set2 = new IntegerSet(list);
         IntegerSet result = set.intersection(set2);
         assertEquals(2, result.length());
+        assertTrue(result.getlist().contains(1));
         assertTrue(result.getlist().contains(3));
-        assertTrue(result.getlist().contains(5));
-        assertFalse(result.getlist().contains(1));
-        assertFalse(result.getlist().contains(2));
-        assertFalse(result.getlist().contains(4));
+        assertFalse(result.getlist().contains(5));
+        assertFalse(result.getlist().contains(6));
     }
 
     @Test
@@ -145,10 +144,10 @@ ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(6);
         IntegerSet set2 = new IntegerSet(list);
         IntegerSet result = set.difference(set2);
-        assertEquals(1, result.length());
+        assertEquals(3, result.length());
         assertTrue(result.getlist().contains(1));
-        assertFalse(result.getlist().contains(3));
-        assertFalse(result.getlist().contains(5));
+        assertTrue(result.getlist().contains(3));
+        assertTrue(result.getlist().contains(5));
         assertFalse(result.getlist().contains(2));
         assertFalse(result.getlist().contains(4));
     }
