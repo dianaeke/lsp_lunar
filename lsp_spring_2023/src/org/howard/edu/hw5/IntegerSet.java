@@ -1,6 +1,4 @@
-/* Uchenna Ekechukwu*/
-
-package org.howard.edu.hw4; 
+package org.howard.edu.hw5;
 
 import java.util.*;
 
@@ -97,7 +95,7 @@ public class IntegerSet {
     
 //    add item if already not exist in list
     
-    public void addItem(int item ) {
+    public void addItem(int item) {
         
         boolean exist=false;
         
